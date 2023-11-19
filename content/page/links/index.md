@@ -6,9 +6,9 @@ links:
   - title: X (Twitter)
     website: https://twitter.com/aokuma_dayo
 menu:
-    main: 
-        params:
-            icon: link
+  main:
+    params:
+      icon: link
 
 comments: false
 ---
