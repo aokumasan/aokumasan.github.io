@@ -9,7 +9,6 @@ categories:
   - 修理	
 tags:
   - ILCE-7M2
-  - α7II
   - A7II
   - SONY
 ---
