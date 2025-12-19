@@ -16,7 +16,9 @@ jobs:
             contents: write
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v6
+              with:
+                submodules: true
 
             - name: Cache Hugo resources
               uses: actions/cache@v3
