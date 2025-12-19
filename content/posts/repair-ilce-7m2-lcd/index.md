@@ -15,7 +15,7 @@ tags:
 
 今となってはだいぶ古い機種になってしまったけど、液晶が割れてる α7II (ILCE-7M2) が手元にあって、そのままでも使えるけどせっかくなので修理してみようとおもう。
 
-![α7II](/p/repair-ilce-7m2-lcd/ilce_7m2.jpg)
+![α7II](/posts/repair-ilce-7m2-lcd/ilce_7m2.jpg)
 
 ## 現状
 
@@ -29,7 +29,7 @@ tags:
 
 下記はすでに取り外したものだけど、割れている LCD パネル。
 
-![割れてる LCD パネル](/p/repair-ilce-7m2-lcd/broken_lcd.jpg)
+![割れてる LCD パネル](/posts/repair-ilce-7m2-lcd/broken_lcd.jpg)
 
 ## パーツ購入
 
@@ -42,7 +42,7 @@ tags:
 
 下記は届いた新品パーツ。
 
-![新しい LCD パネル](/p/repair-ilce-7m2-lcd/new_lcd.jpg)
+![新しい LCD パネル](/posts/repair-ilce-7m2-lcd/new_lcd.jpg)
 
 ## LCD 交換
 
@@ -96,7 +96,7 @@ tags:
 
 調べてみると、メイン基板の裏側の左下 (画像赤丸部分) に LCD バックライト用電源のヒューズがついていた。(初代と同じく `F0004` の模様)
 
-![ILCE-7M2 メイン基板](/p/repair-ilce-7m2-lcd/ilce_7m2_main_circuit_board.jpg)
+![ILCE-7M2 メイン基板](/posts/repair-ilce-7m2-lcd/ilce_7m2_main_circuit_board.jpg)
 
 基板裏側なので一度ボディから取り外さないとアクセスできない場所にある。
 
@@ -125,7 +125,7 @@ tags:
 
 キター！！無事に画面表示されてるー！！！
 
-![修理完了](/p/repair-ilce-7m2-lcd/after_repair.jpg)
+![修理完了](/posts/repair-ilce-7m2-lcd/after_repair.jpg)
 
 そのあとは慎重に慎重に分解したものを元に戻しておいた😇
 フレキを一度全部はずしているので、一通り操作できるか確認してみたけど特に問題なかった。
