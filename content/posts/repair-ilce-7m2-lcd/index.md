@@ -1,9 +1,6 @@
 ---
 title: SONY α7 II の液晶を修理した話
-slug: repair-ilce-7m2-lcd
 date: 2025-08-22T23:29:45+09:00
-comments: false
-draft: false
 categories:
   - カメラ
   - 修理	
