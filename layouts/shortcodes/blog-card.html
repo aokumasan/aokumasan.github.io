@@ -1,0 +1,71 @@
+{{- $url := .Get "url" -}}
+
+{{- $result := try (resources.GetRemote $url) -}}
+{{- with $result -}}
+    {{- if .Err -}}
+        {{ warnf "Error fetching URL: %s" $url .Err }}
+        <p style="color: red;">Failed to fetch URL: {{ $url }}</p>
+    {{- else -}}
+        {{- $content := .Value.Content -}}
+        {{- $title := "" -}}
+        {{- $description := "" -}}
+        {{- $image := "" -}}
+
+        <!-- 抽出された<head>タグ内を探索 -->
+        {{- with index (findRE "(?s)<head[^>]*>.*?</head>" $content) 0 -}}
+            {{- range $meta := findRE "(?s)<meta[^>]*?>" . -}}
+                {{- $name := replaceRE "(?s)<.*?name=\"(.*?)\".*?>" "$1" $meta -}}
+                {{- $property := replaceRE "(?s)<.*?property=\"(.*?)\".*?>" "$1" $meta -}}
+                {{- $content := replaceRE "(?s)<.*?content=\"(.*?)\".*?>" "$1" $meta -}}
+
+                {{- if eq $property "og:title" -}}
+                    {{- $title = $content -}}
+                {{- else if eq $property "og:description" -}}
+                    {{- $description = $content -}}
+                {{- else if eq $property "og:image" -}}
+                    {{- $image = $content -}}
+                {{- end -}}
+
+                {{- if and (eq $description "") (eq $name "description") -}}
+                    {{- $description = $content -}}
+                {{- end -}}
+            {{- end -}}
+
+            <!-- <title>タグの抽出 -->
+            {{- if eq $title "" -}}
+                {{- with index (findRE "<title>(.*?)</title>" .) 0 -}}
+                    {{- $title = replaceRE "<title>(.*?)</title>" "$1" . -}}
+                {{- end -}}
+            {{- end -}}
+        {{- else -}}
+            {{ warnf "Failed to extract <head> from %s" $url }}
+        {{- end -}}
+
+        <!-- 画像URLの処理 -->
+        {{- if and (ne $image "") (not (hasPrefix $image "http")) -}}
+            {{- $image = printf "%s%s" $url $image -}}
+        {{- end -}}
+
+        {{- $thumbnail_url := "/noimage.png" -}}
+        {{- with try (resources.GetRemote $image) -}}
+            {{- if not .Err -}}
+                {{- $thumbnail_url = .Value.RelPermalink -}}
+            {{- end -}}
+        {{- end -}}
+
+        <!-- 表示部分 -->
+        <a href="{{- $url -}}" style="padding: 12px; border: solid 1px #eee; display: flex; text-decoration: none; color: var(--text-color); margin-bottom: 1.5rem; border-radius: 5px;" onMouseOver="this.style.opacity='0.9'" target="_blank">
+            <div style="flex-shrink: 0;">
+                <img src="{{ $thumbnail_url }}" alt="thumbnail" width="100" height="100" style="object-fit: contain;" />
+            </div>
+            <div style="margin-left: 10px;">
+                <h2 style="margin: 0; padding-bottom: 13px; border: none; font-size: 16px; color: var(--text-color);">
+                    {{- $title -}}
+                </h2>
+                <p style="margin: 0; font-size: 13px; word-break: break-word; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; color: var(--text-color);">
+                    {{- $description | plainify | safeHTML -}}
+                </p>
+            </div>
+        </a>
+    {{- end -}}
+{{- end -}}
