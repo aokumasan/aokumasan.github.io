@@ -20,21 +20,22 @@ iVDR-S はカートリッジ型の HDD で、このカートリッジに録画�
 iVDR-S は HDD 側で暗号化してるから、他の機器でも再生できるんだとか。
 そんな iVDR 対応の製品も残念ながら今はもう発売されていないらしく、実質的に終わった規格ということだろう。
 
-https://ja.wikipedia.org/wiki/IVDR
+{{< blog-card url="https://ja.wikipedia.org/wiki/IVDR" >}}
 
-## 内蔵 HDD
+## 内蔵 HDD について
 
-さて、この Wooo に内蔵されている HDD だが、内部的には iVDR-S 規格の HDD が搭載されているようだ。
-つまり、この HDD を取り出して iVDR カセットに移植すれば、他の iVDR 対応機器で再生できる模様。
+さて、この Wooo に内蔵されている HDD だが、下記のブログによると内部的には iVDR-S 規格の HDD が搭載されているようだ。（機種は違うが）
 
-https://www.e-handsjp.com/blog/wooo-hdd-kokan/
+{{< blog-card url="https://www.e-handsjp.com/blog/wooo-hdd-kokan/" >}}
+
+つまり、この HDD を取り出して iVDR カセットに移植すれば、他の iVDR 対応機器で再生できそうである。
 
 ## 分解
 
 写真を撮ってなかったが、背面から見えるネジを外せば簡単に内部の基板にアクセスできた。
 ターゲットの HDD も裏のカバーを外せば丸見えなので、迷うことは多分無いだろう。
 
-## 移植
+## 内蔵 HDD の移植
 
 ちょうどテレビに iVDR-S のカセットが刺さっていたので、このカセットを分解して、取り出した HDD を移植してみた。
 カセットも数本の小さなネジを外せば分解できる。
@@ -57,4 +58,8 @@ https://www.e-handsjp.com/blog/wooo-hdd-kokan/
 テレビに内蔵されていた HDD とは異なり、このレコーダーに内蔵の HDD は iVDR-S ではない普通の HDD で大丈夫だったので、適当に安い 2.5 インチの HDD を買ってきて換装した。
 下記のブログに換装例があったので、とても参考になった。
 
-https://ivdr.blog.jp/archives/52301687.html
+{{< blog-card-static
+  url="https://ivdr.blog.jp/archives/52301687.html"
+	thumbnail_url="https://livedoor.blogimg.jp/yasuking/imgs/f/8/f8f59da4.jpg"
+	title="BIV-WS500のHDDを換装する : iVDR日記"
+>}}
