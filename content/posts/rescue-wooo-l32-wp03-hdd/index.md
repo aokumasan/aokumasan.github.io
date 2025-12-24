@@ -1,7 +1,12 @@
 ---
 date: '2025-12-22T22:40:14+09:00'
-draft: false
 title: '壊れた日立 Wooo L32-WP03 の HDD を救出した'
+categories:
+  - 修理
+tags:
+  - Wooo
+  - L32-WP03
+  - BIV-WS500
 ---
 
 ちょっと前の話だけど、実家で使っていたテレビ（日立 Wooo L32-WP03）が壊れて画面に何も映らなくなってしまった。
