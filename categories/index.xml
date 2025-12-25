@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on aokuma blog</title>
+    <link>https://blog.aokuma.net/categories/</link>
+    <description>Recent content in Categories on aokuma blog</description>
+    <image>
+      <title>aokuma blog</title>
+      <url>https://blog.aokuma.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.aokuma.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 22 Dec 2025 22:40:14 +0900</lastBuildDate>
+    <atom:link href="https://blog.aokuma.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修理</title>
+      <link>https://blog.aokuma.net/categories/%E4%BF%AE%E7%90%86/</link>
+      <pubDate>Mon, 22 Dec 2025 22:40:14 +0900</pubDate>
+      <guid>https://blog.aokuma.net/categories/%E4%BF%AE%E7%90%86/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>カメラ</title>
+      <link>https://blog.aokuma.net/categories/%E3%82%AB%E3%83%A1%E3%83%A9/</link>
+      <pubDate>Fri, 22 Aug 2025 23:29:45 +0900</pubDate>
+      <guid>https://blog.aokuma.net/categories/%E3%82%AB%E3%83%A1%E3%83%A9/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

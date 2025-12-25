@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>A7II on aokuma blog</title>
+    <link>https://blog.aokuma.net/tags/a7ii/</link>
+    <description>Recent content in A7II on aokuma blog</description>
+    <image>
+      <title>aokuma blog</title>
+      <url>https://blog.aokuma.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.aokuma.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Fri, 22 Aug 2025 23:29:45 +0900</lastBuildDate>
+    <atom:link href="https://blog.aokuma.net/tags/a7ii/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SONY α7 II の液晶を修理した話</title>
+      <link>https://blog.aokuma.net/posts/repair-ilce-7m2-lcd/</link>
+      <pubDate>Fri, 22 Aug 2025 23:29:45 +0900</pubDate>
+      <guid>https://blog.aokuma.net/posts/repair-ilce-7m2-lcd/</guid>
+      <description>&lt;p&gt;今となってはだいぶ古い機種になってしまったけど、液晶が割れてる α7II (ILCE-7M2) が手元にあって、そのままでも使えるけどせっかくなので修理してみようとおもう。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;α7II&#34; loading=&#34;lazy&#34; src=&#34;https://blog.aokuma.net/posts/repair-ilce-7m2-lcd/ilce_7m2.jpg&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;現状&#34;&gt;現状&lt;/h2&gt;
+&lt;p&gt;現状は下記のような感じ。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;液晶割れ
+&lt;ul&gt;
+&lt;li&gt;画面表示は一応見える&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;それ以外の動作は特に問題なし&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;液晶割れはやっぱり直しておきたいし、ひとまず液晶パネルを交換してみることにした。&lt;/p&gt;
+&lt;p&gt;下記はすでに取り外したものだけど、割れている LCD パネル。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;割れてる LCD パネル&#34; loading=&#34;lazy&#34; src=&#34;https://blog.aokuma.net/posts/repair-ilce-7m2-lcd/broken_lcd.jpg&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;パーツ購入&#34;&gt;パーツ購入&lt;/h2&gt;
+&lt;p&gt;新品パーツを AliExpress で購入してみた。&lt;/p&gt;
+&lt;p&gt;「ILCE-7M2 LCD」とかで検索して、販売実績がありそうで、できるだけ安いものを探して適当に買ってみた。
+送料無料で 3,593 円で購入できた。&lt;/p&gt;
+&lt;p&gt;届けばラッキーくらいの気持ちで初めて AliExpress を使ってみたけど、1週間くらいで無事に届いた。&lt;/p&gt;
+&lt;p&gt;下記は届いた新品パーツ。&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;新しい LCD パネル&#34; loading=&#34;lazy&#34; src=&#34;https://blog.aokuma.net/posts/repair-ilce-7m2-lcd/new_lcd.jpg&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;lcd-交換&#34;&gt;LCD 交換&lt;/h2&gt;
+&lt;p&gt;早速届いた新品の液晶を組み込んでみた。
+分解手順は「ILCE-7M2 repair」とかで YouTube を調べればいくつか動画が出てくるので、それを参考にした。&lt;/p&gt;
+&lt;p&gt;とりあえず新品液晶のフレキを基盤に接続して仮組み状態で電源を入れてみたところ、正常に液晶が表示されたので「よしよし」と思って分解したものをすべて元通りに組み直した。&lt;/p&gt;
+&lt;p&gt;のだが、、、&lt;/p&gt;
+&lt;p&gt;画面表示がなんかおかしい&amp;hellip;😇&lt;br&gt;
+表示が下から上へと流れていく&amp;hellip;&lt;/p&gt;
+&lt;p&gt;接触不良かなとコネクタ付近を触ってみたりしていたら、ついに何も表示されなくなってしまった…。
+ファインダーを覗くと表示されているので、どうもカメラ自体は起動しているようだ…。&lt;/p&gt;
+&lt;p&gt;うーん、新品液晶を壊してしまったか😇&lt;/p&gt;
+&lt;h2 id=&#34;余計壊してしまったので再度調査&#34;&gt;余計壊してしまったので再度調査&lt;/h2&gt;
+&lt;p&gt;やらかしたー、と思いながらも、なにか見落としている点がないか再度バラしてみたりして確認した。
+けど症状は変わらず。&lt;/p&gt;
+&lt;p&gt;ふと、もしかしてバックライトが点灯していないじゃないか？と思い調べてみることにした。&lt;/p&gt;
+&lt;p&gt;液晶裏に銀色の薄い反射板のようなものが貼ってあったため、端っこを少しだけ剥がしてスマホのライトをかざしてみた。
+すると薄っすらとなにか映っているのが見えるではないか！！&lt;/p&gt;
+&lt;p&gt;完全に壊れているわけではなかったのだ！！&lt;/p&gt;
+&lt;p&gt;ということはさっき色々いじったときにバックライトが壊れてしまったのか…？
+試しに最初からついていた割れている LCD を再度接続してみて、同様にスマホのライトを後ろから当ててみると、こちらも液晶自体に表示はされているのが確認できた。&lt;/p&gt;
+&lt;p&gt;もともとついていた LCD のバックライトは生きていたので、取り外すときに壊してしまった可能性ももちろんあるが、光ってくれないとおかしい。&lt;/p&gt;
+&lt;p&gt;新品パーツも元々ついていたものもバックライトが光らないということは、バックライトの電源が来ていない可能性が高そうだ。
+となるとフレキ or 基盤側のどこかがおかしいのか…？&lt;/p&gt;
+&lt;h2 id=&#34;バックライトが点灯しない問題について調査&#34;&gt;バックライトが点灯しない問題について調査&lt;/h2&gt;
+&lt;p&gt;α7系でバックライトが点灯しない症状について調査していると、dpreview のフォーラムで下記のような書き込みを発見。&lt;/p&gt;
+&lt;a href=&#34;https://www.dpreview.com/forums/thread/4616698&#34;
+	style=&#34;display: flex; text-decoration: none; color: inherit; margin-bottom: 2rem; padding: 20px; border: 2px solid var(--border); border-radius: 4px; transition: all 0.2s ease; background: var(--theme); box-shadow: none;&#34;
+	onMouseOver=&#34;this.style.borderColor=&#39;var(--primary)&#39;; this.style.boxShadow=&#39;0 2px 4px rgba(0,0,0,0.1)&#39;;&#34;
+	onMouseOut=&#34;this.style.borderColor=&#39;var(--border)&#39;; this.style.boxShadow=&#39;none&#39;;&#34; target=&#34;_blank&#34;&gt;
+	&lt;div style=&#34;flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-right: 20px;&#34;&gt;
+		&lt;h2 style=&#34;margin: 0 0 10px 0; font-size: 18px; font-weight: 700; line-height: 1.4; color: var(--content);&#34;&gt;ILCE-7 LCD not working | DPReview Forums&lt;/h2&gt;
+		&lt;p
+			style=&#34;margin: 0; font-size: 14px; line-height: 1.6; color: var(--secondary); word-break: break-word; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

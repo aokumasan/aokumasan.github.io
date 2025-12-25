@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>L32-WP03 on aokuma blog</title>
+    <link>https://blog.aokuma.net/tags/l32-wp03/</link>
+    <description>Recent content in L32-WP03 on aokuma blog</description>
+    <image>
+      <title>aokuma blog</title>
+      <url>https://blog.aokuma.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.aokuma.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 22 Dec 2025 22:40:14 +0900</lastBuildDate>
+    <atom:link href="https://blog.aokuma.net/tags/l32-wp03/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>壊れた日立 Wooo L32-WP03 の HDD を救出した</title>
+      <link>https://blog.aokuma.net/posts/rescue-wooo-l32-wp03-hdd/</link>
+      <pubDate>Mon, 22 Dec 2025 22:40:14 +0900</pubDate>
+      <guid>https://blog.aokuma.net/posts/rescue-wooo-l32-wp03-hdd/</guid>
+      <description>&lt;p&gt;ちょっと前の話だけど、実家で使っていたテレビ（日立 Wooo L32-WP03）が壊れて画面に何も映らなくなってしまった。
+確か 2009 年くらいに買った HDD 内蔵型のテレビで、テレビの番組表からサクサク録画できるもんだから便利に使っていた。
+どうも液晶部分が壊れて何も表示されなくなってしまっただけみたいで、内部的にはまだ動いているようだった。
+もうそのまま捨ててしまっても良かったんだけど、結構貴重な録画データもあったので、なんとか救出できないかと試してみた。&lt;/p&gt;
+&lt;p&gt;ちなみに作業したのは半年くらい前の話で、特に写真も撮ってなかったので文字だけの備忘録みたいなもん。&lt;/p&gt;
+&lt;h2 id=&#34;wooo-l32-wp03-の特徴&#34;&gt;Wooo L32-WP03 の特徴&lt;/h2&gt;
+&lt;p&gt;このテレビの特徴はなんといっても iVDR-S 対応ということだろう。
+iVDR-S はカートリッジ型の HDD で、このカートリッジに録画したデータは別の iVDR スロットがある機器に入れ替えれば中身を再生できて、なかなか便利なものだった。
+また、内蔵 HDD の容量がいっぱいになってしまったらデータを iVDR-S に移せるし、そもそも iVDR-S にそのまま録画もできて、当時の仕様としてはとても柔軟に録画データを扱えて嬉しかった。
+現代のテレビも外付け HDD を接続して録画できると思うが、録画したデータは暗号化されていて、録画したテレビ本体以外に HDD を接続しても再生できないはず。
+iVDR-S は HDD 側で暗号化してるから、他の機器でも再生できるんだとか。
+そんな iVDR 対応の製品も残念ながら今はもう発売されていないらしく、実質的に終わった規格ということだろう。&lt;/p&gt;
+
+        &lt;a href=&#34;https://ja.wikipedia.org/wiki/IVDR&#34; style=&#34;display: flex; text-decoration: none; color: inherit; margin-bottom: 2rem; padding: 20px; border: 2px solid var(--border); border-radius: 4px; transition: all 0.2s ease; background: var(--theme); box-shadow: none;&#34; onMouseOver=&#34;this.style.borderColor=&#39;var(--primary)&#39;; this.style.boxShadow=&#39;0 2px 4px rgba(0,0,0,0.1)&#39;;&#34; onMouseOut=&#34;this.style.borderColor=&#39;var(--border)&#39;; this.style.boxShadow=&#39;none&#39;;&#34; target=&#34;_blank&#34;&gt;
+            &lt;div style=&#34;flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-right: 20px;&#34;&gt;
+                &lt;h2 style=&#34;margin: 0 0 10px 0; font-size: 18px; font-weight: 700; line-height: 1.4; color: var(--content);&#34;&gt;iVDR - Wikipedia&lt;/h2&gt;
+                &lt;p style=&#34;margin: 0; font-size: 14px; line-height: 1.6; color: var(--secondary); word-break: break-word; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

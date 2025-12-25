@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on aokuma blog</title>
+    <link>https://blog.aokuma.net/tags/</link>
+    <description>Recent content in Tags on aokuma blog</description>
+    <image>
+      <title>aokuma blog</title>
+      <url>https://blog.aokuma.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.aokuma.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.153.2</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 22 Dec 2025 22:40:14 +0900</lastBuildDate>
+    <atom:link href="https://blog.aokuma.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BIV-WS500</title>
+      <link>https://blog.aokuma.net/tags/biv-ws500/</link>
+      <pubDate>Mon, 22 Dec 2025 22:40:14 +0900</pubDate>
+      <guid>https://blog.aokuma.net/tags/biv-ws500/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>L32-WP03</title>
+      <link>https://blog.aokuma.net/tags/l32-wp03/</link>
+      <pubDate>Mon, 22 Dec 2025 22:40:14 +0900</pubDate>
+      <guid>https://blog.aokuma.net/tags/l32-wp03/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wooo</title>
+      <link>https://blog.aokuma.net/tags/wooo/</link>
+      <pubDate>Mon, 22 Dec 2025 22:40:14 +0900</pubDate>
+      <guid>https://blog.aokuma.net/tags/wooo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>A7II</title>
+      <link>https://blog.aokuma.net/tags/a7ii/</link>
+      <pubDate>Fri, 22 Aug 2025 23:29:45 +0900</pubDate>
+      <guid>https://blog.aokuma.net/tags/a7ii/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ILCE-7M2</title>
+      <link>https://blog.aokuma.net/tags/ilce-7m2/</link>
+      <pubDate>Fri, 22 Aug 2025 23:29:45 +0900</pubDate>
+      <guid>https://blog.aokuma.net/tags/ilce-7m2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SONY</title>
+      <link>https://blog.aokuma.net/tags/sony/</link>
+      <pubDate>Fri, 22 Aug 2025 23:29:45 +0900</pubDate>
+      <guid>https://blog.aokuma.net/tags/sony/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,142 @@
+<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>SONY α7 II の液晶を修理した話 | aokuma blog</title><meta name=keywords content="ILCE-7M2,A7II,SONY"><meta name=description content="今となってはだいぶ古い機種になってしまったけど、液晶が割れてる α7II (ILCE-7M2) が手元にあって、そのままでも使えるけどせっかくなので修理してみようとおもう。
+
+現状
+現状は下記のような感じ。
+
+液晶割れ
+
+画面表示は一応見える
+
+
+それ以外の動作は特に問題なし
+
+液晶割れはやっぱり直しておきたいし、ひとまず液晶パネルを交換してみることにした。
+下記はすでに取り外したものだけど、割れている LCD パネル。
+
+パーツ購入
+新品パーツを AliExpress で購入してみた。
+「ILCE-7M2 LCD」とかで検索して、販売実績がありそうで、できるだけ安いものを探して適当に買ってみた。
+送料無料で 3,593 円で購入できた。
+届けばラッキーくらいの気持ちで初めて AliExpress を使ってみたけど、1週間くらいで無事に届いた。
+下記は届いた新品パーツ。
+
+LCD 交換
+早速届いた新品の液晶を組み込んでみた。
+分解手順は「ILCE-7M2 repair」とかで YouTube を調べればいくつか動画が出てくるので、それを参考にした。
+とりあえず新品液晶のフレキを基盤に接続して仮組み状態で電源を入れてみたところ、正常に液晶が表示されたので「よしよし」と思って分解したものをすべて元通りに組み直した。
+のだが、、、
+画面表示がなんかおかしい&mldr;😇
+表示が下から上へと流れていく&mldr;
+接触不良かなとコネクタ付近を触ってみたりしていたら、ついに何も表示されなくなってしまった…。
+ファインダーを覗くと表示されているので、どうもカメラ自体は起動しているようだ…。
+うーん、新品液晶を壊してしまったか😇
+余計壊してしまったので再度調査
+やらかしたー、と思いながらも、なにか見落としている点がないか再度バラしてみたりして確認した。
+けど症状は変わらず。
+ふと、もしかしてバックライトが点灯していないじゃないか？と思い調べてみることにした。
+液晶裏に銀色の薄い反射板のようなものが貼ってあったため、端っこを少しだけ剥がしてスマホのライトをかざしてみた。
+すると薄っすらとなにか映っているのが見えるではないか！！
+完全に壊れているわけではなかったのだ！！
+ということはさっき色々いじったときにバックライトが壊れてしまったのか…？
+試しに最初からついていた割れている LCD を再度接続してみて、同様にスマホのライトを後ろから当ててみると、こちらも液晶自体に表示はされているのが確認できた。
+もともとついていた LCD のバックライトは生きていたので、取り外すときに壊してしまった可能性ももちろんあるが、光ってくれないとおかしい。
+新品パーツも元々ついていたものもバックライトが光らないということは、バックライトの電源が来ていない可能性が高そうだ。
+となるとフレキ or 基盤側のどこかがおかしいのか…？
+バックライトが点灯しない問題について調査
+α7系でバックライトが点灯しない症状について調査していると、dpreview のフォーラムで下記のような書き込みを発見。
+
+	
+		ILCE-7 LCD not working | DPReview Forums
+		"><meta name=author content="aokumasan"><link rel=canonical href=https://blog.aokuma.net/posts/repair-ilce-7m2-lcd/><link crossorigin=anonymous href=/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css integrity="sha256-NDzEgLn/yPBMy+XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as=style><link rel=icon href=https://blog.aokuma.net/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://blog.aokuma.net/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://blog.aokuma.net/favicon-32x32.png><link rel=apple-touch-icon href=https://blog.aokuma.net/apple-touch-icon.png><link rel=mask-icon href=https://blog.aokuma.net/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://blog.aokuma.net/posts/repair-ilce-7m2-lcd/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><meta property="og:url" content="https://blog.aokuma.net/posts/repair-ilce-7m2-lcd/"><meta property="og:site_name" content="aokuma blog"><meta property="og:title" content="SONY α7 II の液晶を修理した話"><meta property="og:description" content="今となってはだいぶ古い機種になってしまったけど、液晶が割れてる α7II (ILCE-7M2) が手元にあって、そのままでも使えるけどせっかくなので修理してみようとおもう。
+現状 現状は下記のような感じ。
+液晶割れ 画面表示は一応見える それ以外の動作は特に問題なし 液晶割れはやっぱり直しておきたいし、ひとまず液晶パネルを交換してみることにした。
+下記はすでに取り外したものだけど、割れている LCD パネル。
+パーツ購入 新品パーツを AliExpress で購入してみた。
+「ILCE-7M2 LCD」とかで検索して、販売実績がありそうで、できるだけ安いものを探して適当に買ってみた。 送料無料で 3,593 円で購入できた。
+届けばラッキーくらいの気持ちで初めて AliExpress を使ってみたけど、1週間くらいで無事に届いた。
+下記は届いた新品パーツ。
+LCD 交換 早速届いた新品の液晶を組み込んでみた。 分解手順は「ILCE-7M2 repair」とかで YouTube を調べればいくつか動画が出てくるので、それを参考にした。
+とりあえず新品液晶のフレキを基盤に接続して仮組み状態で電源を入れてみたところ、正常に液晶が表示されたので「よしよし」と思って分解したものをすべて元通りに組み直した。
+のだが、、、
+画面表示がなんかおかしい…😇
+表示が下から上へと流れていく…
+接触不良かなとコネクタ付近を触ってみたりしていたら、ついに何も表示されなくなってしまった…。 ファインダーを覗くと表示されているので、どうもカメラ自体は起動しているようだ…。
+うーん、新品液晶を壊してしまったか😇
+余計壊してしまったので再度調査 やらかしたー、と思いながらも、なにか見落としている点がないか再度バラしてみたりして確認した。 けど症状は変わらず。
+ふと、もしかしてバックライトが点灯していないじゃないか？と思い調べてみることにした。
+液晶裏に銀色の薄い反射板のようなものが貼ってあったため、端っこを少しだけ剥がしてスマホのライトをかざしてみた。 すると薄っすらとなにか映っているのが見えるではないか！！
+完全に壊れているわけではなかったのだ！！
+ということはさっき色々いじったときにバックライトが壊れてしまったのか…？ 試しに最初からついていた割れている LCD を再度接続してみて、同様にスマホのライトを後ろから当ててみると、こちらも液晶自体に表示はされているのが確認できた。
+もともとついていた LCD のバックライトは生きていたので、取り外すときに壊してしまった可能性ももちろんあるが、光ってくれないとおかしい。
+新品パーツも元々ついていたものもバックライトが光らないということは、バックライトの電源が来ていない可能性が高そうだ。 となるとフレキ or 基盤側のどこかがおかしいのか…？
+バックライトが点灯しない問題について調査 α7系でバックライトが点灯しない症状について調査していると、dpreview のフォーラムで下記のような書き込みを発見。
+ILCE-7 LCD not working | DPReview Forums "><meta property="og:locale" content="ja-JP"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-08-22T23:29:45+09:00"><meta property="article:modified_time" content="2025-08-22T23:29:45+09:00"><meta property="article:tag" content="ILCE-7M2"><meta property="article:tag" content="A7II"><meta property="article:tag" content="SONY"><meta property="og:image" content="https://blog.aokuma.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.aokuma.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="SONY α7 II の液晶を修理した話"><meta name=twitter:description content="今となってはだいぶ古い機種になってしまったけど、液晶が割れてる α7II (ILCE-7M2) が手元にあって、そのままでも使えるけどせっかくなので修理してみようとおもう。
+
+現状
+現状は下記のような感じ。
+
+液晶割れ
+
+画面表示は一応見える
+
+
+それ以外の動作は特に問題なし
+
+液晶割れはやっぱり直しておきたいし、ひとまず液晶パネルを交換してみることにした。
+下記はすでに取り外したものだけど、割れている LCD パネル。
+
+パーツ購入
+新品パーツを AliExpress で購入してみた。
+「ILCE-7M2 LCD」とかで検索して、販売実績がありそうで、できるだけ安いものを探して適当に買ってみた。
+送料無料で 3,593 円で購入できた。
+届けばラッキーくらいの気持ちで初めて AliExpress を使ってみたけど、1週間くらいで無事に届いた。
+下記は届いた新品パーツ。
+
+LCD 交換
+早速届いた新品の液晶を組み込んでみた。
+分解手順は「ILCE-7M2 repair」とかで YouTube を調べればいくつか動画が出てくるので、それを参考にした。
+とりあえず新品液晶のフレキを基盤に接続して仮組み状態で電源を入れてみたところ、正常に液晶が表示されたので「よしよし」と思って分解したものをすべて元通りに組み直した。
+のだが、、、
+画面表示がなんかおかしい&mldr;😇
+表示が下から上へと流れていく&mldr;
+接触不良かなとコネクタ付近を触ってみたりしていたら、ついに何も表示されなくなってしまった…。
+ファインダーを覗くと表示されているので、どうもカメラ自体は起動しているようだ…。
+うーん、新品液晶を壊してしまったか😇
+余計壊してしまったので再度調査
+やらかしたー、と思いながらも、なにか見落としている点がないか再度バラしてみたりして確認した。
+けど症状は変わらず。
+ふと、もしかしてバックライトが点灯していないじゃないか？と思い調べてみることにした。
+液晶裏に銀色の薄い反射板のようなものが貼ってあったため、端っこを少しだけ剥がしてスマホのライトをかざしてみた。
+すると薄っすらとなにか映っているのが見えるではないか！！
+完全に壊れているわけではなかったのだ！！
+ということはさっき色々いじったときにバックライトが壊れてしまったのか…？
+試しに最初からついていた割れている LCD を再度接続してみて、同様にスマホのライトを後ろから当ててみると、こちらも液晶自体に表示はされているのが確認できた。
+もともとついていた LCD のバックライトは生きていたので、取り外すときに壊してしまった可能性ももちろんあるが、光ってくれないとおかしい。
+新品パーツも元々ついていたものもバックライトが光らないということは、バックライトの電源が来ていない可能性が高そうだ。
+となるとフレキ or 基盤側のどこかがおかしいのか…？
+バックライトが点灯しない問題について調査
+α7系でバックライトが点灯しない症状について調査していると、dpreview のフォーラムで下記のような書き込みを発見。
+
+	
+		ILCE-7 LCD not working | DPReview Forums
+		"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.aokuma.net/posts/"},{"@type":"ListItem","position":2,"name":"SONY α7 II の液晶を修理した話","item":"https://blog.aokuma.net/posts/repair-ilce-7m2-lcd/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"SONY α7 II の液晶を修理した話","name":"SONY α7 II の液晶を修理した話","description":"今となってはだいぶ古い機種になってしまったけど、液晶が割れてる α7II (ILCE-7M2) が手元にあって、そのままでも使えるけどせっかくなので修理してみようとおもう。\n現状 現状は下記のような感じ。\n液晶割れ 画面表示は一応見える それ以外の動作は特に問題なし 液晶割れはやっぱり直しておきたいし、ひとまず液晶パネルを交換してみることにした。\n下記はすでに取り外したものだけど、割れている LCD パネル。\nパーツ購入 新品パーツを AliExpress で購入してみた。\n「ILCE-7M2 LCD」とかで検索して、販売実績がありそうで、できるだけ安いものを探して適当に買ってみた。 送料無料で 3,593 円で購入できた。\n届けばラッキーくらいの気持ちで初めて AliExpress を使ってみたけど、1週間くらいで無事に届いた。\n下記は届いた新品パーツ。\nLCD 交換 早速届いた新品の液晶を組み込んでみた。 分解手順は「ILCE-7M2 repair」とかで YouTube を調べればいくつか動画が出てくるので、それを参考にした。\nとりあえず新品液晶のフレキを基盤に接続して仮組み状態で電源を入れてみたところ、正常に液晶が表示されたので「よしよし」と思って分解したものをすべて元通りに組み直した。\nのだが、、、\n画面表示がなんかおかしい\u0026hellip;😇\n表示が下から上へと流れていく\u0026hellip;\n接触不良かなとコネクタ付近を触ってみたりしていたら、ついに何も表示されなくなってしまった…。 ファインダーを覗くと表示されているので、どうもカメラ自体は起動しているようだ…。\nうーん、新品液晶を壊してしまったか😇\n余計壊してしまったので再度調査 やらかしたー、と思いながらも、なにか見落としている点がないか再度バラしてみたりして確認した。 けど症状は変わらず。\nふと、もしかしてバックライトが点灯していないじゃないか？と思い調べてみることにした。\n液晶裏に銀色の薄い反射板のようなものが貼ってあったため、端っこを少しだけ剥がしてスマホのライトをかざしてみた。 すると薄っすらとなにか映っているのが見えるではないか！！\n完全に壊れているわけではなかったのだ！！\nということはさっき色々いじったときにバックライトが壊れてしまったのか…？ 試しに最初からついていた割れている LCD を再度接続してみて、同様にスマホのライトを後ろから当ててみると、こちらも液晶自体に表示はされているのが確認できた。\nもともとついていた LCD のバックライトは生きていたので、取り外すときに壊してしまった可能性ももちろんあるが、光ってくれないとおかしい。\n新品パーツも元々ついていたものもバックライトが光らないということは、バックライトの電源が来ていない可能性が高そうだ。 となるとフレキ or 基盤側のどこかがおかしいのか…？\nバックライトが点灯しない問題について調査 α7系でバックライトが点灯しない症状について調査していると、dpreview のフォーラムで下記のような書き込みを発見。\nILCE-7 LCD not working | DPReview Forums ","keywords":["ILCE-7M2","A7II","SONY"],"articleBody":"今となってはだいぶ古い機種になってしまったけど、液晶が割れてる α7II (ILCE-7M2) が手元にあって、そのままでも使えるけどせっかくなので修理してみようとおもう。\n現状 現状は下記のような感じ。\n液晶割れ 画面表示は一応見える それ以外の動作は特に問題なし 液晶割れはやっぱり直しておきたいし、ひとまず液晶パネルを交換してみることにした。\n下記はすでに取り外したものだけど、割れている LCD パネル。\nパーツ購入 新品パーツを AliExpress で購入してみた。\n「ILCE-7M2 LCD」とかで検索して、販売実績がありそうで、できるだけ安いものを探して適当に買ってみた。 送料無料で 3,593 円で購入できた。\n届けばラッキーくらいの気持ちで初めて AliExpress を使ってみたけど、1週間くらいで無事に届いた。\n下記は届いた新品パーツ。\nLCD 交換 早速届いた新品の液晶を組み込んでみた。 分解手順は「ILCE-7M2 repair」とかで YouTube を調べればいくつか動画が出てくるので、それを参考にした。\nとりあえず新品液晶のフレキを基盤に接続して仮組み状態で電源を入れてみたところ、正常に液晶が表示されたので「よしよし」と思って分解したものをすべて元通りに組み直した。\nのだが、、、\n画面表示がなんかおかしい…😇\n表示が下から上へと流れていく…\n接触不良かなとコネクタ付近を触ってみたりしていたら、ついに何も表示されなくなってしまった…。 ファインダーを覗くと表示されているので、どうもカメラ自体は起動しているようだ…。\nうーん、新品液晶を壊してしまったか😇\n余計壊してしまったので再度調査 やらかしたー、と思いながらも、なにか見落としている点がないか再度バラしてみたりして確認した。 けど症状は変わらず。\nふと、もしかしてバックライトが点灯していないじゃないか？と思い調べてみることにした。\n液晶裏に銀色の薄い反射板のようなものが貼ってあったため、端っこを少しだけ剥がしてスマホのライトをかざしてみた。 すると薄っすらとなにか映っているのが見えるではないか！！\n完全に壊れているわけではなかったのだ！！\nということはさっき色々いじったときにバックライトが壊れてしまったのか…？ 試しに最初からついていた割れている LCD を再度接続してみて、同様にスマホのライトを後ろから当ててみると、こちらも液晶自体に表示はされているのが確認できた。\nもともとついていた LCD のバックライトは生きていたので、取り外すときに壊してしまった可能性ももちろんあるが、光ってくれないとおかしい。\n新品パーツも元々ついていたものもバックライトが光らないということは、バックライトの電源が来ていない可能性が高そうだ。 となるとフレキ or 基盤側のどこかがおかしいのか…？\nバックライトが点灯しない問題について調査 α7系でバックライトが点灯しない症状について調査していると、dpreview のフォーラムで下記のような書き込みを発見。\nILCE-7 LCD not working | DPReview Forums どうも初代 α7 でバックライトの電源回路にあるヒューズ (F0004) が飛んでバックライトが点灯しなくなってしまっていて、ヒューズをショートさせたら表示されたというもの。\nこれはちょっと試してみる価値がありそうだなぁということで、試してみることにした。\nα7II の LCD バックライトのヒューズ 調べてみると、メイン基板の裏側の左下 (画像赤丸部分) に LCD バックライト用電源のヒューズがついていた。(初代と同じく F0004 の模様)\n基板裏側なので一度ボディから取り外さないとアクセスできない場所にある。\nフレキ地獄をくぐり抜け、なんとか基板を取り外すことができた。 早速テスターで調べてみると確かにヒューズが飛んでいる状態だったので、ひとまずこれが原因と考えて良さそうだ。\nヒューズ修理 ヒューズを交換するにしても、表面実装のとても小さいパーツでとても交換難易度が高そうだ…。　パーツも入手できるかわからない。\nということで、自己責任でヒューズをショートさせてみることにした。\n発火・爆発の危険があるのであくまでも自己責任で。\nマスキングをして、他のパーツとショートさせないように細心の注意をはらいながらハンダでヒューズをショートさせてみた。 すぐ隣に別のパーツがあるためそっちとショートしてしまっていないか、テスターでかなり入念に確認をした。\nちなみに先ほどの基板の画像はすでにヒューズの部分をショートさせてある。\n動作確認（再） 基板をボディに戻し、外したフレキや LCD を再接続して、電源が入れられるところまで組み直した。\nドキドキしながら電源を ON にすると…\nキター！！無事に画面表示されてるー！！！\nそのあとは慎重に慎重に分解したものを元に戻しておいた😇 フレキを一度全部はずしているので、一通り操作できるか確認してみたけど特に問題なかった。 よかったー！！！\nまとめ ということで、サクッと LCD パネルを交換するだけのはずが、やらかしにより基板を取り出してハンダ付けする事になってしまった話でした。\nYouTube の動画を見て「これくらいならできるだろう！」と高を括って修理に挑んだら他の場所を壊して更にドツボにハマるという、あるあるをやってしまった気がする。 今回は無事に修理できたけど、DC/DCコンバータとかを壊してしまっていたらどうしようもなかったわけで…\n何はともあれ、液晶割れは新品交換で直ったし表示もちゃんとされるようになったので、いろいろ撮って遊びたい。 オールドレンズ遊びでもしようかなぁ。\n","wordCount":"116","inLanguage":"en","image":"https://blog.aokuma.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished":"2025-08-22T23:29:45+09:00","dateModified":"2025-08-22T23:29:45+09:00","author":{"@type":"Person","name":"aokumasan"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aokuma.net/posts/repair-ilce-7m2-lcd/"},"publisher":{"@type":"Organization","name":"aokuma blog","logo":{"@type":"ImageObject","url":"https://blog.aokuma.net/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://blog.aokuma.net/ accesskey=h title="aokuma blog (Alt + H)"><img src=https://blog.aokuma.net/apple-touch-icon.png alt aria-label=logo height=35>aokuma blog</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://blog.aokuma.net/categories/ title=categories><span>categories</span></a></li><li><a href=https://blog.aokuma.net/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.aokuma.net/archives/ title=archives><span>archives</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://blog.aokuma.net/>Home</a>&nbsp;»&nbsp;<a href=https://blog.aokuma.net/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">SONY α7 II の液晶を修理した話</h1><div class=post-meta><span title='2025-08-22 23:29:45 +0900 +0900'>2025/08/22</span>&nbsp;·&nbsp;<span>aokumasan</span></div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><nav id=TableOfContents><ul><li><a href=#現状>現状</a></li><li><a href=#パーツ購入>パーツ購入</a></li><li><a href=#lcd-交換>LCD 交換</a></li><li><a href=#余計壊してしまったので再度調査>余計壊してしまったので再度調査</a></li><li><a href=#バックライトが点灯しない問題について調査>バックライトが点灯しない問題について調査</a></li><li><a href=#α7ii-の-lcd-バックライトのヒューズ>α7II の LCD バックライトのヒューズ</a></li><li><a href=#ヒューズ修理>ヒューズ修理</a></li><li><a href=#動作確認再>動作確認（再）</a></li><li><a href=#まとめ>まとめ</a></li></ul></nav></div></details></div><div class=post-content><p>今となってはだいぶ古い機種になってしまったけど、液晶が割れてる α7II (ILCE-7M2) が手元にあって、そのままでも使えるけどせっかくなので修理してみようとおもう。</p><p><img alt=α7II loading=lazy src=/posts/repair-ilce-7m2-lcd/ilce_7m2.jpg></p><h2 id=現状>現状<a hidden class=anchor aria-hidden=true href=#現状>#</a></h2><p>現状は下記のような感じ。</p><ul><li>液晶割れ<ul><li>画面表示は一応見える</li></ul></li><li>それ以外の動作は特に問題なし</li></ul><p>液晶割れはやっぱり直しておきたいし、ひとまず液晶パネルを交換してみることにした。</p><p>下記はすでに取り外したものだけど、割れている LCD パネル。</p><p><img alt="割れてる LCD パネル" loading=lazy src=/posts/repair-ilce-7m2-lcd/broken_lcd.jpg></p><h2 id=パーツ購入>パーツ購入<a hidden class=anchor aria-hidden=true href=#パーツ購入>#</a></h2><p>新品パーツを AliExpress で購入してみた。</p><p>「ILCE-7M2 LCD」とかで検索して、販売実績がありそうで、できるだけ安いものを探して適当に買ってみた。
+送料無料で 3,593 円で購入できた。</p><p>届けばラッキーくらいの気持ちで初めて AliExpress を使ってみたけど、1週間くらいで無事に届いた。</p><p>下記は届いた新品パーツ。</p><p><img alt="新しい LCD パネル" loading=lazy src=/posts/repair-ilce-7m2-lcd/new_lcd.jpg></p><h2 id=lcd-交換>LCD 交換<a hidden class=anchor aria-hidden=true href=#lcd-交換>#</a></h2><p>早速届いた新品の液晶を組み込んでみた。
+分解手順は「ILCE-7M2 repair」とかで YouTube を調べればいくつか動画が出てくるので、それを参考にした。</p><p>とりあえず新品液晶のフレキを基盤に接続して仮組み状態で電源を入れてみたところ、正常に液晶が表示されたので「よしよし」と思って分解したものをすべて元通りに組み直した。</p><p>のだが、、、</p><p>画面表示がなんかおかしい&mldr;😇<br>表示が下から上へと流れていく&mldr;</p><p>接触不良かなとコネクタ付近を触ってみたりしていたら、ついに何も表示されなくなってしまった…。
+ファインダーを覗くと表示されているので、どうもカメラ自体は起動しているようだ…。</p><p>うーん、新品液晶を壊してしまったか😇</p><h2 id=余計壊してしまったので再度調査>余計壊してしまったので再度調査<a hidden class=anchor aria-hidden=true href=#余計壊してしまったので再度調査>#</a></h2><p>やらかしたー、と思いながらも、なにか見落としている点がないか再度バラしてみたりして確認した。
+けど症状は変わらず。</p><p>ふと、もしかしてバックライトが点灯していないじゃないか？と思い調べてみることにした。</p><p>液晶裏に銀色の薄い反射板のようなものが貼ってあったため、端っこを少しだけ剥がしてスマホのライトをかざしてみた。
+すると薄っすらとなにか映っているのが見えるではないか！！</p><p>完全に壊れているわけではなかったのだ！！</p><p>ということはさっき色々いじったときにバックライトが壊れてしまったのか…？
+試しに最初からついていた割れている LCD を再度接続してみて、同様にスマホのライトを後ろから当ててみると、こちらも液晶自体に表示はされているのが確認できた。</p><p>もともとついていた LCD のバックライトは生きていたので、取り外すときに壊してしまった可能性ももちろんあるが、光ってくれないとおかしい。</p><p>新品パーツも元々ついていたものもバックライトが光らないということは、バックライトの電源が来ていない可能性が高そうだ。
+となるとフレキ or 基盤側のどこかがおかしいのか…？</p><h2 id=バックライトが点灯しない問題について調査>バックライトが点灯しない問題について調査<a hidden class=anchor aria-hidden=true href=#バックライトが点灯しない問題について調査>#</a></h2><p>α7系でバックライトが点灯しない症状について調査していると、dpreview のフォーラムで下記のような書き込みを発見。</p><a href=https://www.dpreview.com/forums/thread/4616698 style="display:flex;text-decoration:none;color:inherit;margin-bottom:2rem;padding:20px;border:2px solid var(--border);border-radius:4px;transition:all .2s ease;background:var(--theme);box-shadow:none" onmouseover='this.style.borderColor="var(--primary)",this.style.boxShadow="0 2px 4px rgba(0,0,0,0.1)"' onmouseout='this.style.borderColor="var(--border)",this.style.boxShadow="none"' target=_blank><div style=flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding-right:20px><h2 style="margin:0 0 10px;font-size:18px;font-weight:700;line-height:1.4;color:var(--content)">ILCE-7 LCD not working | DPReview Forums</h2><p style=margin:0;font-size:14px;line-height:1.6;color:var(--secondary);word-break:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden></p></div><div style=flex-shrink:0;width:200px;height:120px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--code-bg);border-radius:4px><img src=https://dpreview-data.community.forum/styles/4/styles/dpreview/xenforo/icon.png alt=thumbnail style=width:100%;height:100%;object-fit:cover></div></a><p>どうも初代 α7 でバックライトの電源回路にあるヒューズ (<code>F0004</code>) が飛んでバックライトが点灯しなくなってしまっていて、ヒューズをショートさせたら表示されたというもの。</p><p>これはちょっと試してみる価値がありそうだなぁということで、試してみることにした。</p><h2 id=α7ii-の-lcd-バックライトのヒューズ>α7II の LCD バックライトのヒューズ<a hidden class=anchor aria-hidden=true href=#α7ii-の-lcd-バックライトのヒューズ>#</a></h2><p>調べてみると、メイン基板の裏側の左下 (画像赤丸部分) に LCD バックライト用電源のヒューズがついていた。(初代と同じく <code>F0004</code> の模様)</p><p><img alt="ILCE-7M2 メイン基板" loading=lazy src=/posts/repair-ilce-7m2-lcd/ilce_7m2_main_circuit_board.jpg></p><p>基板裏側なので一度ボディから取り外さないとアクセスできない場所にある。</p><p>フレキ地獄をくぐり抜け、なんとか基板を取り外すことができた。
+早速テスターで調べてみると確かにヒューズが飛んでいる状態だったので、ひとまずこれが原因と考えて良さそうだ。</p><h2 id=ヒューズ修理>ヒューズ修理<a hidden class=anchor aria-hidden=true href=#ヒューズ修理>#</a></h2><p>ヒューズを交換するにしても、表面実装のとても小さいパーツでとても交換難易度が高そうだ…。　
+パーツも入手できるかわからない。</p><p>ということで、自己責任でヒューズをショートさせてみることにした。</p><p><strong>発火・爆発の危険があるのであくまでも自己責任で。</strong></p><p>マスキングをして、他のパーツとショートさせないように細心の注意をはらいながらハンダでヒューズをショートさせてみた。
+すぐ隣に別のパーツがあるためそっちとショートしてしまっていないか、テスターでかなり入念に確認をした。</p><p>ちなみに先ほどの基板の画像はすでにヒューズの部分をショートさせてある。</p><h2 id=動作確認再>動作確認（再）<a hidden class=anchor aria-hidden=true href=#動作確認再>#</a></h2><p>基板をボディに戻し、外したフレキや LCD を再接続して、電源が入れられるところまで組み直した。</p><p>ドキドキしながら電源を ON にすると&mldr;</p><p>キター！！無事に画面表示されてるー！！！</p><p><img alt=修理完了 loading=lazy src=/posts/repair-ilce-7m2-lcd/after_repair.jpg></p><p>そのあとは慎重に慎重に分解したものを元に戻しておいた😇
+フレキを一度全部はずしているので、一通り操作できるか確認してみたけど特に問題なかった。
+よかったー！！！</p><h2 id=まとめ>まとめ<a hidden class=anchor aria-hidden=true href=#まとめ>#</a></h2><p>ということで、サクッと LCD パネルを交換するだけのはずが、やらかしにより基板を取り出してハンダ付けする事になってしまった話でした。</p><p>YouTube の動画を見て「これくらいならできるだろう！」と高を括って修理に挑んだら他の場所を壊して更にドツボにハマるという、あるあるをやってしまった気がする。
+今回は無事に修理できたけど、DC/DCコンバータとかを壊してしまっていたらどうしようもなかったわけで&mldr;</p><p>何はともあれ、液晶割れは新品交換で直ったし表示もちゃんとされるようになったので、いろいろ撮って遊びたい。
+オールドレンズ遊びでもしようかなぁ。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://blog.aokuma.net/tags/ilce-7m2/>ILCE-7M2</a></li><li><a href=https://blog.aokuma.net/tags/a7ii/>A7II</a></li><li><a href=https://blog.aokuma.net/tags/sony/>SONY</a></li></ul><nav class=paginav><a class=prev href=https://blog.aokuma.net/posts/rescue-wooo-l32-wp03-hdd/><span class=title>« Prev</span><br><span>壊れた日立 Wooo L32-WP03 の HDD を救出した</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://blog.aokuma.net/>aokuma blog</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
