@@ -82,8 +82,11 @@ tags:
 
 α7系でバックライトが点灯しない症状について調査していると、dpreview のフォーラムで下記のような書き込みを発見。
 
-[ILCE\-7 LCD not working: Sony Alpha Full Frame E\-mount Talk Forum: Digital Photography Review](https://www.dpreview.com/forums/thread/4616698)
-
+{{< blog-card-static
+  url="https://www.dpreview.com/forums/thread/4616698"
+  thumbnail_url="https://dpreview-data.community.forum/styles/4/styles/dpreview/xenforo/icon.png"
+  title="ILCE-7 LCD not working | DPReview Forums"
+>}}
 
 どうも初代 α7 でバックライトの電源回路にあるヒューズ (`F0004`) が飛んでバックライトが点灯しなくなってしまっていて、ヒューズをショートさせたら表示されたというもの。
 
