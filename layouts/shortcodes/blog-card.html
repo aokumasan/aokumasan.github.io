@@ -47,24 +47,22 @@
         {{- end -}}
 
         {{- $thumbnail_url := "/noimage.png" -}}
-        {{- with try (resources.GetRemote $image) -}}
-            {{- if not .Err -}}
-                {{- $thumbnail_url = .Value.RelPermalink -}}
-            {{- end -}}
+        {{- if ne $image "" -}}
+            {{- $thumbnail_url = $image -}}
         {{- end -}}
 
         <!-- 表示部分 -->
-        <a href="{{- $url -}}" style="padding: 12px; border: solid 1px #eee; display: flex; text-decoration: none; color: var(--text-color); margin-bottom: 1.5rem; border-radius: 5px;" onMouseOver="this.style.opacity='0.9'" target="_blank">
-            <div style="flex-shrink: 0;">
-                <img src="{{ $thumbnail_url }}" alt="thumbnail" width="100" height="100" style="object-fit: contain;" />
-            </div>
-            <div style="margin-left: 10px;">
-                <h2 style="margin: 0; padding-bottom: 13px; border: none; font-size: 16px; color: var(--text-color);">
+        <a href="{{- $url -}}" style="display: flex; text-decoration: none; color: inherit; margin-bottom: 2rem; padding: 20px; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s ease; background: var(--entry); box-shadow: none;" onMouseOver="this.style.borderColor='var(--primary)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)';" onMouseOut="this.style.borderColor='var(--border)'; this.style.boxShadow='none';" target="_blank">
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-right: 20px;">
+                <h2 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 700; line-height: 1.4; color: var(--content);">
                     {{- $title -}}
                 </h2>
-                <p style="margin: 0; font-size: 13px; word-break: break-word; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; color: var(--text-color);">
+                <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--secondary); word-break: break-word; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;">
                     {{- $description | plainify | safeHTML -}}
                 </p>
+            </div>
+            <div style="flex-shrink: 0; width: 200px; height: 120px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: var(--code-bg); border-radius: 4px;">
+                <img src="{{ $thumbnail_url }}" alt="thumbnail" style="width: 100%; height: 100%; object-fit: cover;" />
             </div>
         </a>
     {{- end -}}
