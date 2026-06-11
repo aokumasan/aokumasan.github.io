@@ -1,0 +1,119 @@
+---
+// 外部サイトへのリンクカード。Hugo の blog-card / blog-card-static ショートコードの代替。
+// title が指定されなければビルド時にリンク先の OGP メタデータを取得する。
+interface Props {
+  url: string;
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+interface OgpData {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const ogpCache = (globalThis as any).__blogCardOgpCache ??= new Map<string, OgpData>();
+
+function decodeEntities(text: string): string {
+  return text
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#0?39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
+}
+
+function extractMeta(head: string, attr: 'property' | 'name', key: string): string {
+  for (const meta of head.match(/<meta[^>]*?>/gis) || []) {
+    const attrRe = new RegExp(`${attr}\\s*=\\s*["']${key}["']`, 'i');
+    if (!attrRe.test(meta)) continue;
+    const content = meta.match(/content\s*=\s*["']([^"']*)["']/i);
+    if (content) return decodeEntities(content[1]);
+  }
+  return '';
+}
+
+async function fetchOgp(targetUrl: string): Promise<OgpData> {
+  if (ogpCache.has(targetUrl)) return ogpCache.get(targetUrl)!;
+
+  const result: OgpData = { title: '', description: '', image: '' };
+  try {
+    const res = await fetch(targetUrl, {
+      signal: AbortSignal.timeout(10000),
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; blog-card-bot)' },
+    });
+    const html = await res.text();
+    const head = html.match(/<head[^>]*>.*?<\/head>/is)?.[0] ?? html;
+
+    result.title = extractMeta(head, 'property', 'og:title');
+    result.description =
+      extractMeta(head, 'property', 'og:description') || extractMeta(head, 'name', 'description');
+    result.image = extractMeta(head, 'property', 'og:image');
+
+    if (!result.title) {
+      const titleTag = head.match(/<title[^>]*>(.*?)<\/title>/is);
+      if (titleTag) result.title = decodeEntities(titleTag[1].trim());
+    }
+    if (result.image && !result.image.startsWith('http')) {
+      result.image = new URL(result.image, targetUrl).href;
+    }
+  } catch (err) {
+    console.warn(`[BlogCard] Failed to fetch OGP from ${targetUrl}:`, err);
+  }
+  ogpCache.set(targetUrl, result);
+  return result;
+}
+
+const { url, title: titleProp, description: descriptionProp, image: imageProp } = Astro.props;
+
+let title = titleProp ?? '';
+let description = descriptionProp ?? '';
+let image = imageProp ?? '';
+
+if (!title) {
+  const ogp = await fetchOgp(url);
+  title = ogp.title;
+  description = description || ogp.description;
+  image = image || ogp.image;
+}
+
+const hostname = new URL(url).hostname;
+if (!title) title = hostname;
+const thumbnail = image || '/noimage.png';
+---
+
+<a
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="card-hover not-prose my-6 flex items-stretch gap-0 bg-white dark:bg-[var(--color-card-dark)] rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden no-underline group"
+>
+  <div class="flex-1 min-w-0 flex flex-col justify-center p-4 sm:p-5">
+    <span class="block text-sm sm:text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors line-clamp-2">
+      {title}
+    </span>
+    {description && (
+      <span class="block text-xs text-gray-400 dark:text-gray-500 mt-1.5 line-clamp-2">
+        {description}
+      </span>
+    )}
+    <span class="inline-flex items-center gap-1 mt-2 text-xs text-gray-400 dark:text-gray-500">
+      <svg class="w-3 h-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+      </svg>
+      <span class="truncate">{hostname}</span>
+    </span>
+  </div>
+  <div class="hidden sm:flex w-48 shrink-0 items-center justify-center overflow-hidden bg-gray-50 dark:bg-gray-800">
+    <img
+      src={thumbnail}
+      alt=""
+      class="w-full h-full object-cover"
+      loading="lazy"
+      onerror="this.src='/noimage.png'"
+    />
+  </div>
+</a>

@@ -1,6 +1,6 @@
-# Hugo build output
-public/
-resources/
+# Astro build output
+dist/
+.astro/
 
 # Node.js dependencies
 node_modules/
@@ -9,9 +9,6 @@ node_modules/
 .DS_Store
 Thumbs.db
 
-# Hugo configuration files
-hugo_stats.json
-
 # Temporary files
 *.bak
 *.swp
@@ -19,10 +16,8 @@ hugo_stats.json
 
 # Logs
 *.log
+npm-debug.log*
 
 # Backup files
 *.orig
 *.old
-
-# Hugo build lock file
-.hugo_build.lock
