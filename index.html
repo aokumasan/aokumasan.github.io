@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="generator" content="Astro v6.4.6"><title>aokuma blog</title><meta name="description" content="aokuma's tech blog"><meta name="author" content="aokumasan"><meta name="robots" content="index, follow"><meta property="og:title" content="aokuma blog"><meta property="og:type" content="website"><meta property="og:description" content="aokuma's tech blog"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="aokuma blog"><meta name="twitter:description" content="aokuma's tech blog"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="aokuma blog" href="/index.xml"><script>
+      (function() {
+        function getTheme() {
+          if (localStorage.theme === 'dark') return 'dark';
+          if (localStorage.theme === 'light') return 'light';
+          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        function applyTheme(theme) {
+          var root = document.documentElement;
+          root.classList.toggle('dark', theme === 'dark');
+          root.dataset.theme = theme;
+        }
+
+        applyTheme(getTheme());
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+          if (!('theme' in localStorage)) {
+            applyTheme(getTheme());
+          }
+        });
+
+        document.addEventListener('astro:after-swap', function() {
+          applyTheme(getTheme());
+        });
+
+        window.__applyTheme = applyTheme;
+        window.__getTheme = getTheme;
+      })();
+    </script><link rel="stylesheet" href="/_astro/BaseLayout.CfSv1KdU.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><style>[data-astro-transition-scope="astro-vm4occjh-1"] { view-transition-name: astro-vm4occjh-1; }@layer astro { ::view-transition-old(astro-vm4occjh-1) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(astro-vm4occjh-1) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(astro-vm4occjh-1) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(astro-vm4occjh-1) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-vm4occjh-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-vm4occjh-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-vm4occjh-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-vm4occjh-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-vm4occjh-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-vm4occjh-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-vm4occjh-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-vm4occjh-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-vm4occjh-2"] { view-transition-name: astro-vm4occjh-2; }@layer astro { ::view-transition-old(astro-vm4occjh-2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(astro-vm4occjh-2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(astro-vm4occjh-2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(astro-vm4occjh-2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-vm4occjh-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-vm4occjh-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-vm4occjh-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-vm4occjh-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-vm4occjh-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-vm4occjh-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-vm4occjh-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-vm4occjh-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body class="min-h-screen flex flex-col"> <meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script> <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-[var(--color-bg-dark)]/80 border-b border-gray-200/50 dark:border-gray-700/50"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="flex items-center justify-between h-16"> <a href="/" class="flex items-center gap-2 shrink-0"> <span class="text-xl font-bold text-primary hover:opacity-80 transition-opacity"> aokuma blog </span> </a> <nav class="hidden md:flex items-center gap-1" aria-label="メインナビゲーション"> <a href="/" class="px-3 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-primary/5 transition-colors"> ホーム </a><a href="/categories" class="px-3 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-primary/5 transition-colors"> カテゴリ </a><a href="/tags" class="px-3 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-primary/5 transition-colors"> タグ </a><a href="/archives" class="px-3 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-primary/5 transition-colors"> アーカイブ </a> </nav> <div class="flex items-center gap-2"> <button id="search-trigger" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="検索"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path> </svg> </button> <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="テーマ切替"> <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="メニュー"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path> </svg> </button> </div> </div> <div id="mobile-menu" class="hidden md:hidden pb-4"> <nav class="flex flex-col gap-1"> <a href="/" class="block px-3 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition-colors"> ホーム </a><a href="/categories" class="block px-3 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition-colors"> カテゴリ </a><a href="/tags" class="block px-3 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition-colors"> タグ </a><a href="/archives" class="block px-3 py-2 text-sm font-medium rounded-lg text-gray-600 dark:text-gray-300 hover:text-primary hover:bg-primary/5 transition-colors"> アーカイブ </a> </nav> </div> </div> </header> <div id="search-modal" class="fixed inset-0 z-[100] hidden" aria-hidden="true"> <div id="search-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div> <div class="absolute top-[15%] left-1/2 -translate-x-1/2 w-full max-w-xl"> <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-2xl overflow-hidden mx-4"> <div class="flex items-center gap-3 px-4 py-3 border-b border-gray-100 dark:border-gray-700"> <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path> </svg> <input id="search-input" type="text" placeholder="記事を検索..." class="flex-1 bg-transparent border-none outline-none text-sm text-gray-900 dark:text-gray-100 placeholder:text-gray-400" autocomplete="off"> <button id="search-close" class="p-1 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors" aria-label="検索を閉じる"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> <div id="search-results" class="max-h-80 overflow-y-auto p-2"> <div class="px-3 py-8 text-center text-sm text-gray-400">キーワードを入力して検索</div> </div> </div> </div> </div> <script type="module">let c=null;async function v(){if(!c)try{c=await(await fetch("/search-index.json")).json();const t=document.getElementById("search-input");t?.value&&g(t.value)}catch{c=[]}}function l(){const e=document.getElementById("search-modal");e&&(e.classList.remove("hidden"),e.setAttribute("aria-hidden","false"),document.body.style.overflow="hidden",setTimeout(()=>{document.getElementById("search-input")?.focus()},100),v())}function u(){const e=document.getElementById("search-modal");if(!e)return;e.classList.add("hidden"),e.setAttribute("aria-hidden","true"),document.body.style.overflow="";const t=document.getElementById("search-input");t&&(t.value="");const r=document.getElementById("search-results");r&&(r.innerHTML='<div class="px-3 py-8 text-center text-sm text-gray-400">キーワードを入力して検索</div>')}function g(e){const t=document.getElementById("search-results");if(!t)return;if(!c){t.innerHTML='<div class="px-3 py-8 text-center text-sm text-gray-400">読み込み中...</div>';return}if(!e.trim()){t.innerHTML='<div class="px-3 py-8 text-center text-sm text-gray-400">キーワードを入力して検索</div>';return}const o=e.toLowerCase().trim().split(/\s+/),a=c.filter(n=>{const s=[n.title,n.description,n.category,n.body,...n.tags||[]].join(" ").toLowerCase();return o.every(d=>s.includes(d))}).slice(0,20);if(a.length===0){t.innerHTML='<div class="px-3 py-8 text-center text-sm text-gray-400">結果が見つかりませんでした</div>';return}const i=new RegExp(`(${o.map(n=>f(n)).join("|")})`,"gi");t.innerHTML=a.map(n=>{const s=y(n,o);return`
+      <a href="/posts/${n.slug}" class="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group">
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors line-clamp-1">${m(n.title,i)}</div>
+          ${s?`<div class="text-xs text-gray-400 dark:text-gray-500 mt-0.5 line-clamp-2">${m(s,i)}</div>`:""}
+          ${n.category?`<div class="flex items-center gap-2 mt-0.5"><span class="text-xs text-primary/70">${x(n.category)}</span></div>`:""}
+        </div>
+        <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 shrink-0 mt-1 group-hover:text-primary transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+        </svg>
+      </a>
+    `}).join("")}function y(e,t){const r=e.body||e.description||"";if(!r)return"";const o=r.toLowerCase();for(const a of t){const i=o.indexOf(a);if(i!==-1){const n=Math.max(0,i-20),s=Math.min(r.length,i+a.length+40),d=r.slice(n,s);return(n>0?"...":"")+d+(s<r.length?"...":"")}}return""}function m(e,t){return x(e).replace(t,'<mark class="bg-primary/20 text-primary rounded-sm px-0.5">$1</mark>')}function f(e){return e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}function x(e){const t=document.createElement("div");return t.textContent=e,t.innerHTML}function p(e){g(e.target.value)}function h(){const e=document.getElementById("search-input");e&&(e.removeEventListener("input",p),e.addEventListener("input",p));const t=document.getElementById("search-trigger");t&&(t.removeEventListener("click",l),t.addEventListener("click",l)),document.getElementById("search-close")?.addEventListener("click",u),document.getElementById("search-backdrop")?.addEventListener("click",u)}h();document.addEventListener("astro:after-swap",h);</script> <script>
+  function handleThemeToggle() {
+    var root = document.documentElement;
+    var isDark = root.classList.contains('dark');
+    if (isDark) {
+      root.classList.remove('dark');
+      localStorage.theme = 'light';
+    } else {
+      root.classList.add('dark');
+      localStorage.theme = 'dark';
+    }
+  }
+
+  function handleMobileMenu() {
+    var menu = document.getElementById('mobile-menu');
+    if (menu) {
+      menu.classList.toggle('hidden');
+    }
+  }
+
+  function bindHandlers() {
+    var themeBtn = document.getElementById('theme-toggle');
+    var mobileBtn = document.getElementById('mobile-menu-btn');
+
+    if (themeBtn) {
+      themeBtn.removeEventListener('click', handleThemeToggle);
+      themeBtn.addEventListener('click', handleThemeToggle);
+    }
+
+    if (mobileBtn) {
+      mobileBtn.removeEventListener('click', handleMobileMenu);
+      mobileBtn.addEventListener('click', handleMobileMenu);
+    }
+  }
+
+  bindHandlers();
+
+  document.addEventListener('astro:after-swap', function() {
+    bindHandlers();
+  });
+</script> <main class="flex-1">  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <div class="flex flex-col lg:flex-row gap-8 py-8"> <aside class="hidden lg:block w-full lg:w-80 shrink-0 order-first"> <div class="sticky top-20 space-y-6"> <aside class="space-y-6"> <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-sm p-6 text-center"> <img src="https://github.com/aokumasan.png" alt="aokumasan" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover ring-2 ring-primary/20" width="80" height="80"> <h2 class="font-semibold text-lg">aokumasan</h2> <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">aokuma&#39;s tech blog</p> <div class="flex items-center justify-center gap-3 mt-4"> <a href="https://x.com/aokuma_dayo" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors" title="X"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg> </a><a href="https://github.com/aokumasan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors" title="GitHub"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg> </a><a href="/index.xml" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors" title="RSS"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"></path></svg> </a> </div> <div class="flex items-center justify-center gap-6 mt-4 pt-4 border-t border-gray-100 dark:border-gray-800"> <div class="text-center"> <div class="font-semibold text-sm">2</div> <div class="text-xs text-gray-400">記事</div> </div> <div class="text-center"> <div class="font-semibold text-sm">4k</div> <div class="text-xs text-gray-400">文字数</div> </div> </div> </div> <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-sm p-5" data-sidebar-section="categories"> <h2 class="text-sm font-semibold mb-3 text-gray-900 dark:text-gray-100">
+カテゴリ
+</h2> <div class="sidebar-expand-list flex flex-wrap gap-2"> <a href="/categories/修理" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> 修理 <span class="ml-1 opacity-60">(2)</span> </a><a href="/categories/カメラ" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> カメラ <span class="ml-1 opacity-60">(1)</span> </a> </div>  </div> <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-sm p-5" data-sidebar-section="tags"> <h2 class="text-sm font-semibold mb-3 text-gray-900 dark:text-gray-100">
+タグ
+</h2> <div class="sidebar-expand-list flex flex-wrap gap-2"> <a href="/tags/wooo" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> Wooo <span class="ml-1 opacity-60">(1)</span> </a><a href="/tags/l32-wp03" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> L32-WP03 <span class="ml-1 opacity-60">(1)</span> </a><a href="/tags/biv-ws500" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> BIV-WS500 <span class="ml-1 opacity-60">(1)</span> </a><a href="/tags/ilce-7m2" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> ILCE-7M2 <span class="ml-1 opacity-60">(1)</span> </a><a href="/tags/a7ii" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> A7II <span class="ml-1 opacity-60">(1)</span> </a><a href="/tags/sony" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> SONY <span class="ml-1 opacity-60">(1)</span> </a> </div>  </div> <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-sm p-5"> <h2 class="text-sm font-semibold mb-4 text-gray-900 dark:text-gray-100">
+ランダム記事
+</h2> <div class="space-y-2"> <a href="/posts/repair-ilce-7m2-lcd" class="block text-xs text-gray-500 dark:text-gray-400 truncate hover:text-primary transition-colors"> SONY α7 II の液晶を修理した話 </a><a href="/posts/rescue-wooo-l32-wp03-hdd" class="block text-xs text-gray-500 dark:text-gray-400 truncate hover:text-primary transition-colors"> 壊れた日立 Wooo L32-WP03 の HDD を救出した </a> </div> </div> </aside> <script>
+  function initSidebarToggles() {
+    document.querySelectorAll('.sidebar-toggle-btn').forEach((btn) => {
+      if (btn.dataset.initialized) return;
+      btn.dataset.initialized = 'true';
+
+      const section = btn.closest('[data-sidebar-section]');
+      if (!section) return;
+      const list = section.querySelector('.sidebar-expand-list');
+      if (!list) return;
+      const extraItems = list.querySelectorAll('.sidebar-extra');
+      const label = btn.textContent || '';
+
+      btn.addEventListener('click', () => {
+        const expanded = btn.dataset.expanded === 'true';
+        extraItems.forEach((el) => el.classList.toggle('hidden', expanded));
+        btn.dataset.expanded = String(!expanded);
+        btn.textContent = expanded ? label : '折りたたむ';
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', initSidebarToggles);
+  initSidebarToggles();
+</script> </div> </aside> <div class="flex-1 min-w-0">  <section class="relative overflow-hidden rounded-2xl mb-10"> <div class="absolute inset-0"> <div class="w-full h-full bg-gradient-to-br from-primary via-primary/80 to-cyan-600" aria-hidden="true"></div> <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70"></div> </div> <div class="relative px-6 py-12 sm:px-10 sm:py-16 lg:py-20 text-center text-white"> <div class="mb-8"> <img src="https://github.com/aokumasan.png" alt="aokumasan" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full mx-auto object-cover ring-4 ring-white/30 shadow-2xl" width="112" height="112"> </div> <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 tracking-tight"> aokuma blog </h1> <p class="text-lg sm:text-xl text-white/80 font-light mb-6"> aokuma&#39;s tech blog </p> <div class="flex items-center justify-center gap-4 mb-8"> <a href="https://x.com/aokuma_dayo" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110" title="X"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg> </a><a href="https://github.com/aokumasan" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110" title="GitHub"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg> </a><a href="/index.xml" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110" title="RSS"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"></path></svg> </a> </div> <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10"> <a href="/archives" class="group text-center"> <div class="text-2xl sm:text-3xl font-bold group-hover:scale-110 transition-transform"> 2 </div> <div class="text-sm text-white/70 mt-1">記事</div> </a> <div class="w-px h-10 bg-white/20 hidden sm:block"></div> <a href="/categories" class="group text-center"> <div class="text-2xl sm:text-3xl font-bold group-hover:scale-110 transition-transform"> 2 </div> <div class="text-sm text-white/70 mt-1">カテゴリ</div> </a> <div class="w-px h-10 bg-white/20 hidden sm:block"></div> <a href="/tags" class="group text-center"> <div class="text-2xl sm:text-3xl font-bold group-hover:scale-110 transition-transform"> 6 </div> <div class="text-sm text-white/70 mt-1">タグ</div> </a> </div> </div> </section> <section><h2 class="text-xl font-bold mb-6 flex items-center gap-2"><span class="w-1 h-6 bg-primary rounded-full inline-block"></span>
+記事一覧
+</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><article class="card-hover bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-sm overflow-hidden group" data-astro-transition-scope="astro-vm4occjh-1"> <a href="/posts/rescue-wooo-l32-wp03-hdd" class="block"> <div class="aspect-[2/1] bg-gradient-to-br from-primary/10 via-primary/5 to-transparent flex items-center justify-center overflow-hidden"> <span class="text-4xl font-bold text-primary/20 group-hover:text-primary/30 transition-colors duration-500"> 壊 </span> </div> <div class="p-5"> <div class="flex items-center gap-2 mb-2"> <span class="inline-block text-xs font-medium text-primary bg-primary/10 px-2 py-0.5 rounded-full"> 修理 </span>   </div> <div class="flex items-center gap-3 text-xs text-gray-400 dark:text-gray-500 mb-3"> <time datetime="2025-12-22T13:40:14.000Z">2025/12/22</time> <span>1357 文字</span> <span>3 min read</span> </div> <h2 class="text-lg font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2"> 壊れた日立 Wooo L32-WP03 の HDD を救出した </h2> <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed"> 画面が映らなくなった日立 Wooo L32-WP03 の内蔵 HDD を iVDR-S カセットに移植して、録画データを救出した備忘録。 </p> <div class="mt-3"> <span class="text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+more...
+</span> </div> </div> </a> <div class="px-5 pb-4 flex flex-wrap gap-1.5"> <a href="/tags/wooo" class="text-xs px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all"> Wooo </a><a href="/tags/l32-wp03" class="text-xs px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all"> L32-WP03 </a><a href="/tags/biv-ws500" class="text-xs px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all"> BIV-WS500 </a> </div> </article><article class="card-hover bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-sm overflow-hidden group" data-astro-transition-scope="astro-vm4occjh-2"> <a href="/posts/repair-ilce-7m2-lcd" class="block"> <div class="aspect-[2/1] overflow-hidden"> <img src="/_astro/ilce_7m2.BlROmL0y.jpg" alt="SONY α7 II の液晶を修理した話" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"> </div> <div class="p-5"> <div class="flex items-center gap-2 mb-2"> <span class="inline-block text-xs font-medium text-primary bg-primary/10 px-2 py-0.5 rounded-full"> カメラ </span><span class="inline-block text-xs font-medium text-primary bg-primary/10 px-2 py-0.5 rounded-full"> 修理 </span>   </div> <div class="flex items-center gap-3 text-xs text-gray-400 dark:text-gray-500 mb-3"> <time datetime="2025-08-22T14:29:45.000Z">2025/08/22</time> <span>2175 文字</span> <span>5 min read</span> </div> <h2 class="text-lg font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2"> SONY α7 II の液晶を修理した話 </h2> <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed"> 液晶が割れた α7II (ILCE-7M2) の LCD パネルを交換したら、バックライトのヒューズを飛ばしてしまい、基板修理までする羽目になった話。 </p> <div class="mt-3"> <span class="text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+more...
+</span> </div> </div> </a> <div class="px-5 pb-4 flex flex-wrap gap-1.5"> <a href="/tags/ilce-7m2" class="text-xs px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all"> ILCE-7M2 </a><a href="/tags/a7ii" class="text-xs px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all"> A7II </a><a href="/tags/sony" class="text-xs px-2 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all"> SONY </a> </div> </article></div></section>   </div> <button id="sidebar-toggle" class="lg:hidden fixed bottom-6 right-6 z-40 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary-dark transition-colors" aria-label="サイドバーを開く"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"></path> </svg> </button> <div id="sidebar-drawer" class="lg:hidden fixed inset-0 z-50 pointer-events-none" aria-hidden="true" inert> <div id="sidebar-backdrop" class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300"></div> <div id="sidebar-panel" class="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white dark:bg-[var(--color-bg-dark)] shadow-2xl transform translate-x-full transition-transform duration-300 overflow-y-auto"> <div class="p-4"> <button id="sidebar-close" class="mb-4 p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="サイドバーを閉じる"> <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> <aside class="space-y-6"> <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-sm p-6 text-center"> <img src="https://github.com/aokumasan.png" alt="aokumasan" class="w-20 h-20 rounded-full mx-auto mb-3 object-cover ring-2 ring-primary/20" width="80" height="80"> <h2 class="font-semibold text-lg">aokumasan</h2> <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">aokuma&#39;s tech blog</p> <div class="flex items-center justify-center gap-3 mt-4"> <a href="https://x.com/aokuma_dayo" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors" title="X"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg> </a><a href="https://github.com/aokumasan" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors" title="GitHub"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg> </a><a href="/index.xml" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors" title="RSS"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"></path></svg> </a> </div> <div class="flex items-center justify-center gap-6 mt-4 pt-4 border-t border-gray-100 dark:border-gray-800"> <div class="text-center"> <div class="font-semibold text-sm">2</div> <div class="text-xs text-gray-400">記事</div> </div> <div class="text-center"> <div class="font-semibold text-sm">4k</div> <div class="text-xs text-gray-400">文字数</div> </div> </div> </div> <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-sm p-5" data-sidebar-section="categories"> <h2 class="text-sm font-semibold mb-3 text-gray-900 dark:text-gray-100">
+カテゴリ
+</h2> <div class="sidebar-expand-list flex flex-wrap gap-2"> <a href="/categories/修理" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> 修理 <span class="ml-1 opacity-60">(2)</span> </a><a href="/categories/カメラ" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> カメラ <span class="ml-1 opacity-60">(1)</span> </a> </div>  </div> <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-sm p-5" data-sidebar-section="tags"> <h2 class="text-sm font-semibold mb-3 text-gray-900 dark:text-gray-100">
+タグ
+</h2> <div class="sidebar-expand-list flex flex-wrap gap-2"> <a href="/tags/wooo" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> Wooo <span class="ml-1 opacity-60">(1)</span> </a><a href="/tags/l32-wp03" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> L32-WP03 <span class="ml-1 opacity-60">(1)</span> </a><a href="/tags/biv-ws500" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> BIV-WS500 <span class="ml-1 opacity-60">(1)</span> </a><a href="/tags/ilce-7m2" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> ILCE-7M2 <span class="ml-1 opacity-60">(1)</span> </a><a href="/tags/a7ii" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> A7II <span class="ml-1 opacity-60">(1)</span> </a><a href="/tags/sony" class="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors "> SONY <span class="ml-1 opacity-60">(1)</span> </a> </div>  </div> <div class="bg-white dark:bg-[var(--color-card-dark)] rounded-2xl shadow-sm p-5"> <h2 class="text-sm font-semibold mb-4 text-gray-900 dark:text-gray-100">
+ランダム記事
+</h2> <div class="space-y-2"> <a href="/posts/repair-ilce-7m2-lcd" class="block text-xs text-gray-500 dark:text-gray-400 truncate hover:text-primary transition-colors"> SONY α7 II の液晶を修理した話 </a><a href="/posts/rescue-wooo-l32-wp03-hdd" class="block text-xs text-gray-500 dark:text-gray-400 truncate hover:text-primary transition-colors"> 壊れた日立 Wooo L32-WP03 の HDD を救出した </a> </div> </div> </aside> <script>
+  function initSidebarToggles() {
+    document.querySelectorAll('.sidebar-toggle-btn').forEach((btn) => {
+      if (btn.dataset.initialized) return;
+      btn.dataset.initialized = 'true';
+
+      const section = btn.closest('[data-sidebar-section]');
+      if (!section) return;
+      const list = section.querySelector('.sidebar-expand-list');
+      if (!list) return;
+      const extraItems = list.querySelectorAll('.sidebar-extra');
+      const label = btn.textContent || '';
+
+      btn.addEventListener('click', () => {
+        const expanded = btn.dataset.expanded === 'true';
+        extraItems.forEach((el) => el.classList.toggle('hidden', expanded));
+        btn.dataset.expanded = String(!expanded);
+        btn.textContent = expanded ? label : '折りたたむ';
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', initSidebarToggles);
+  initSidebarToggles();
+</script> </div> </div> </div> </div> </div>  </main> <footer class="border-t border-gray-200/50 dark:border-gray-700/50 mt-16"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8"> <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400 dark:text-gray-500 mb-6"> <span>4k 文字</span> <span class="w-px h-3 bg-gray-300 dark:bg-gray-600"></span> <span>2 記事</span> </div> <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-gray-500 dark:text-gray-400"> <span>&copy; 2025 - 2026 <a class="text-primary hover:underline" href="https://github.com/aokumasan">aokumasan</a></span> <span class="hidden sm:inline text-gray-300 dark:text-gray-600">|</span> <span>
+Powered by <a href="https://astro.build" class="text-primary hover:underline">Astro</a> & <a href="https://tailwindcss.com/" class="text-cyan-500 hover:underline">Tailwind</a> </span> </div> <div class="flex items-center justify-center gap-4 mt-4 text-xs text-gray-400 dark:text-gray-500"> <a href="/" class="hover:text-primary transition-colors"> ホーム </a><a href="/categories" class="hover:text-primary transition-colors"> カテゴリ </a><a href="/tags" class="hover:text-primary transition-colors"> タグ </a><a href="/archives" class="hover:text-primary transition-colors"> アーカイブ </a> </div> </div> </footer> <script type="module">function n(){document.querySelectorAll("pre").forEach(t=>{if(t.parentElement?.classList.contains("code-block-wrapper"))return;const e=document.createElement("button");e.className="copy-btn",e.title="コードをコピー",e.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>',e.addEventListener("click",async()=>{const r=t.querySelector("code")?.textContent||t.textContent||"";await navigator.clipboard.writeText(r),e.classList.add("copied"),e.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>',setTimeout(()=>{e.classList.remove("copied"),e.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>'},2e3)});const o=document.createElement("div");o.className="code-block-wrapper",t.parentNode?.insertBefore(o,t),o.appendChild(t),o.appendChild(e)})}n();document.addEventListener("astro:after-swap",n);</script> </body> </html> <script type="module">const a=document.getElementById("sidebar-toggle"),e=document.getElementById("sidebar-drawer"),t=document.getElementById("sidebar-backdrop"),d=document.getElementById("sidebar-panel"),i=document.getElementById("sidebar-close");function o(){e?.removeAttribute("inert"),e?.setAttribute("aria-hidden","false"),e?.classList.remove("pointer-events-none"),t?.classList.remove("opacity-0"),t?.classList.add("opacity-100"),d?.classList.remove("translate-x-full"),document.body.style.overflow="hidden"}function s(){t?.classList.remove("opacity-100"),t?.classList.add("opacity-0"),d?.classList.add("translate-x-full"),setTimeout(()=>{e?.setAttribute("inert",""),e?.setAttribute("aria-hidden","true"),e?.classList.add("pointer-events-none"),document.body.style.overflow=""},300)}a?.addEventListener("click",o);i?.addEventListener("click",s);t?.addEventListener("click",s);document.addEventListener("keydown",n=>{n.key==="Escape"&&e?.getAttribute("aria-hidden")==="false"&&s()});</script>
