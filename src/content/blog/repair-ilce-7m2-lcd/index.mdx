@@ -1,18 +1,22 @@
 ---
 title: SONY α7 II の液晶を修理した話
+description: 液晶が割れた α7II (ILCE-7M2) の LCD パネルを交換したら、バックライトのヒューズを飛ばしてしまい、基板修理までする羽目になった話。
 date: 2025-08-22T23:29:45+09:00
 categories:
   - カメラ
-  - 修理	
+  - 修理
 tags:
   - ILCE-7M2
   - A7II
   - SONY
+cover: ./ilce_7m2.jpg
 ---
+
+import BlogCard from '../../../components/BlogCard.astro';
 
 今となってはだいぶ古い機種になってしまったけど、液晶が割れてる α7II (ILCE-7M2) が手元にあって、そのままでも使えるけどせっかくなので修理してみようとおもう。
 
-![α7II](/posts/repair-ilce-7m2-lcd/ilce_7m2.jpg)
+![α7II](./ilce_7m2.jpg)
 
 ## 現状
 
@@ -26,7 +30,7 @@ tags:
 
 下記はすでに取り外したものだけど、割れている LCD パネル。
 
-![割れてる LCD パネル](/posts/repair-ilce-7m2-lcd/broken_lcd.jpg)
+![割れてる LCD パネル](./broken_lcd.jpg)
 
 ## パーツ購入
 
@@ -39,7 +43,7 @@ tags:
 
 下記は届いた新品パーツ。
 
-![新しい LCD パネル](/posts/repair-ilce-7m2-lcd/new_lcd.jpg)
+![新しい LCD パネル](./new_lcd.jpg)
 
 ## LCD 交換
 
@@ -82,11 +86,11 @@ tags:
 
 α7系でバックライトが点灯しない症状について調査していると、dpreview のフォーラムで下記のような書き込みを発見。
 
-{{< blog-card-static
+<BlogCard
   url="https://www.dpreview.com/forums/thread/4616698"
-  thumbnail_url="https://dpreview-data.community.forum/styles/4/styles/dpreview/xenforo/icon.png"
+  image="https://dpreview-data.community.forum/styles/4/styles/dpreview/xenforo/icon.png"
   title="ILCE-7 LCD not working | DPReview Forums"
->}}
+/>
 
 どうも初代 α7 でバックライトの電源回路にあるヒューズ (`F0004`) が飛んでバックライトが点灯しなくなってしまっていて、ヒューズをショートさせたら表示されたというもの。
 
@@ -96,7 +100,7 @@ tags:
 
 調べてみると、メイン基板の裏側の左下 (画像赤丸部分) に LCD バックライト用電源のヒューズがついていた。(初代と同じく `F0004` の模様)
 
-![ILCE-7M2 メイン基板](/posts/repair-ilce-7m2-lcd/ilce_7m2_main_circuit_board.jpg)
+![ILCE-7M2 メイン基板](./ilce_7m2_main_circuit_board.jpg)
 
 基板裏側なので一度ボディから取り外さないとアクセスできない場所にある。
 
@@ -125,7 +129,7 @@ tags:
 
 キター！！無事に画面表示されてるー！！！
 
-![修理完了](/posts/repair-ilce-7m2-lcd/after_repair.jpg)
+![修理完了](./after_repair.jpg)
 
 そのあとは慎重に慎重に分解したものを元に戻しておいた😇
 フレキを一度全部はずしているので、一通り操作できるか確認してみたけど特に問題なかった。

@@ -1,6 +1,7 @@
 ---
-date: '2025-12-22T22:40:14+09:00'
-title: '壊れた日立 Wooo L32-WP03 の HDD を救出した'
+title: 壊れた日立 Wooo L32-WP03 の HDD を救出した
+description: 画面が映らなくなった日立 Wooo L32-WP03 の内蔵 HDD を iVDR-S カセットに移植して、録画データを救出した備忘録。
+date: 2025-12-22T22:40:14+09:00
 categories:
   - 修理
 tags:
@@ -8,6 +9,8 @@ tags:
   - L32-WP03
   - BIV-WS500
 ---
+
+import BlogCard from '../../../components/BlogCard.astro';
 
 ちょっと前の話だけど、実家で使っていたテレビ（日立 Wooo L32-WP03）が壊れて画面に何も映らなくなってしまった。
 確か 2009 年くらいに買った HDD 内蔵型のテレビで、テレビの番組表からサクサク録画できるもんだから便利に使っていた。
@@ -25,13 +28,13 @@ iVDR-S はカートリッジ型の HDD で、このカートリッジに録画�
 iVDR-S は HDD 側で暗号化してるから、他の機器でも再生できるんだとか。
 そんな iVDR 対応の製品も残念ながら今はもう発売されていないらしく、実質的に終わった規格ということだろう。
 
-{{< blog-card url="https://ja.wikipedia.org/wiki/IVDR" >}}
+<BlogCard url="https://ja.wikipedia.org/wiki/IVDR" />
 
 ## 内蔵 HDD について
 
 さて、この Wooo に内蔵されている HDD だが、下記のブログによると内部的には iVDR-S 規格の HDD が搭載されているようだ。（機種は違うが）
 
-{{< blog-card url="https://www.e-handsjp.com/blog/wooo-hdd-kokan/" >}}
+<BlogCard url="https://www.e-handsjp.com/blog/wooo-hdd-kokan/" />
 
 つまり、この HDD を取り出して iVDR カセットに移植すれば、他の iVDR 対応機器で再生できそうである。
 
@@ -63,8 +66,8 @@ iVDR-S は HDD 側で暗号化してるから、他の機器でも再生でき�
 テレビに内蔵されていた HDD とは異なり、このレコーダーに内蔵の HDD は iVDR-S ではない普通の HDD で大丈夫だったので、適当に安い 2.5 インチの HDD を買ってきて換装した。
 下記のブログに換装例があったので、とても参考になった。
 
-{{< blog-card-static
+<BlogCard
   url="https://ivdr.blog.jp/archives/52301687.html"
-	thumbnail_url="https://livedoor.blogimg.jp/yasuking/imgs/f/8/f8f59da4.jpg"
-	title="BIV-WS500のHDDを換装する : iVDR日記"
->}}
+  image="https://livedoor.blogimg.jp/yasuking/imgs/f/8/f8f59da4.jpg"
+  title="BIV-WS500のHDDを換装する : iVDR日記"
+/>

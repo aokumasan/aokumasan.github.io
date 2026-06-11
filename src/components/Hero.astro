@@ -1,0 +1,92 @@
+---
+import { getCollection } from 'astro:content';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_AUTHOR, SITE_AVATAR, SITE_COVER, SOCIAL_LINKS } from '../consts';
+import SocialIcon from './SocialIcon.astro';
+
+const allBlogPosts = await getCollection('blog');
+const sorted = allBlogPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const categorySet = new Set<string>();
+const tagSet = new Set<string>();
+
+for (const post of sorted) {
+  for (const cat of post.data.categories || []) {
+    categorySet.add(cat);
+  }
+  for (const tag of post.data.tags || []) {
+    tagSet.add(tag);
+  }
+}
+---
+
+<section class="relative overflow-hidden rounded-2xl mb-10">
+  <div class="absolute inset-0">
+    {SITE_COVER ? (
+      <img
+        src={SITE_COVER}
+        alt=""
+        class="w-full h-full object-cover"
+        aria-hidden="true"
+      />
+    ) : (
+      <div class="w-full h-full bg-gradient-to-br from-primary via-primary/80 to-cyan-600" aria-hidden="true"></div>
+    )}
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70"></div>
+  </div>
+
+  <div class="relative px-6 py-12 sm:px-10 sm:py-16 lg:py-20 text-center text-white">
+    <div class="mb-8">
+      <img
+        src={SITE_AVATAR}
+        alt={SITE_AUTHOR}
+        class="w-24 h-24 sm:w-28 sm:h-28 rounded-full mx-auto object-cover ring-4 ring-white/30 shadow-2xl"
+        width="112"
+        height="112"
+      />
+    </div>
+
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 tracking-tight">
+      {SITE_TITLE}
+    </h1>
+    <p class="text-lg sm:text-xl text-white/80 font-light mb-6">
+      {SITE_DESCRIPTION}
+    </p>
+
+    <div class="flex items-center justify-center gap-4 mb-8">
+      {SOCIAL_LINKS.map((link) => (
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110"
+          title={link.name}
+        >
+          <SocialIcon icon={link.icon} class="w-5 h-5" />
+        </a>
+      ))}
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+      <a href="/archives" class="group text-center">
+        <div class="text-2xl sm:text-3xl font-bold group-hover:scale-110 transition-transform">
+          {sorted.length}
+        </div>
+        <div class="text-sm text-white/70 mt-1">記事</div>
+      </a>
+      <div class="w-px h-10 bg-white/20 hidden sm:block"></div>
+      <a href="/categories" class="group text-center">
+        <div class="text-2xl sm:text-3xl font-bold group-hover:scale-110 transition-transform">
+          {categorySet.size}
+        </div>
+        <div class="text-sm text-white/70 mt-1">カテゴリ</div>
+      </a>
+      <div class="w-px h-10 bg-white/20 hidden sm:block"></div>
+      <a href="/tags" class="group text-center">
+        <div class="text-2xl sm:text-3xl font-bold group-hover:scale-110 transition-transform">
+          {tagSet.size}
+        </div>
+        <div class="text-sm text-white/70 mt-1">タグ</div>
+      </a>
+    </div>
+  </div>
+</section>
