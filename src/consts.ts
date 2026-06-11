@@ -1,5 +1,5 @@
 export const SITE_TITLE = 'aokuma blog';
-export const SITE_DESCRIPTION = "aokuma's personal blog";
+export const SITE_DESCRIPTION = "aokuma's tech blog";
 export const SITE_AUTHOR = 'aokumasan';
 export const SITE_URL = 'https://blog.aokuma.net';
 export const SITE_AVATAR = 'https://github.com/aokumasan.png';
